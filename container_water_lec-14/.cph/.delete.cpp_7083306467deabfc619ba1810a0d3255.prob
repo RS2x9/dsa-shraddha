@@ -1,0 +1,1 @@
+{"name":"Local: delete","url":"c:\\Users\\RISHABH\\Desktop\\dsa-shraddha\\container_water_lec-14\\delete.cpp","tests":[{"id":1754139915218,"input":"1\n8\n6\n2\n5\n4\n8\n3\n7","output":"1 6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\RISHABH\\Desktop\\dsa-shraddha\\container_water_lec-14\\delete.cpp","group":"local","local":true}
