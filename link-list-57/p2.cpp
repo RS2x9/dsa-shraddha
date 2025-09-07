@@ -7,12 +7,13 @@ using namespace std;
 // making individual node class
 class Node 
 {
-    // make all the data public , so we using " public" keyword
+    // make all the data public , so we using " public " keyword
     public:
     int data ;      // data storing variable 
     Node* next ;    // pointer to store address of next node 
+
     // creating a constructor 
-    Node(int val)   // wwe will get a value : val
+    Node(int val)   // we will get a value : val
     {
         data =val;      // we will store that value in the data 
         next=NULL ; // always initialize with NULL

@@ -1,0 +1,1 @@
+// search for : friend function and friend class

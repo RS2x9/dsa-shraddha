@@ -1,5 +1,5 @@
 /*
-    total number of subsets for a array conating n elements is 2^n
+    total number of subsets for a array containing n elements is 2^n
     --> the last subset contains nothing 
 */
 

@@ -13,7 +13,7 @@ class Node
     int data ;
     Node* next ; // pointer to store address
     Node(int val )
-    {
+    { 
         data=val;
         next=NULL;
     }
@@ -27,7 +27,7 @@ class List
    public:
    List()
    {
-    head=tail=NULL;  // if at start  no node is present 
+        head=tail=NULL;  // if at start  no node is present 
    } 
 
    // creating a public function 
@@ -51,7 +51,7 @@ class List
     else 
     {
         newNode -> next = head; // means : deferencing the newNode pointer and assign it's next value to head
-        head =newNode;  // updating our head value 
+        head = newNode;  // updating our head value 
     }
    }
 

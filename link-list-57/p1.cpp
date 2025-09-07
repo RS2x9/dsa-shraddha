@@ -11,10 +11,10 @@
 --> Head* which always points to the first node 
 --> Head is nothinng but fist Node* , we don't know  address of other nodes  
 --> Tail* stores address of last node 
---> because of traversing : time coplexity!= O(1), it's O(n) in worst case
-
+--> because of traversing : time complexity!= O(1), it's O(n) in worst case
 
 */
+
 
 /*
             Implementation:
@@ -25,6 +25,7 @@ so in node class : data and node* are stored .
 
 
 */
+
 
 /*
         What Is a Constructor?
@@ -56,6 +57,7 @@ int main() {
 }
 
 */
+
 
 /*          functions in linked list :
 
