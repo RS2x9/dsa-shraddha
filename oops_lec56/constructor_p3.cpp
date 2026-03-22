@@ -14,9 +14,12 @@
         --> parameterised : has parametres 
         --> copy 
     
-    -->same class can have multiple coonstructors with different parameters
-    --> constructor overloading : same parameter name with different data types 
-        --> this is example of polymorphism 
+    -->A class can have multiple constructors with different parameter lists.
+        This is called constructor overloading and is an example of compile-time polymorphism (also called Static Polymorphism)
+    --> Valid overloading:
+            A(int x);
+            A(double x);
+            A(int x, int y);
 */
 
 #include<iostream>
