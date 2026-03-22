@@ -6,7 +6,8 @@
     --> same as name class
     --> don't have return type 
     --> Only called once ( automatically ) at object creation
-    --> memory allocation happens when constructor is called 
+    --> memory allocation happens brfore constructor is called 
+    -->Constructor’s job is nOot to allocate memory but To initialize already allocated memory
     --> main() can't call variables under private automatically , so declare them under public
     --> types :
         --> non - parameterised : no parametres 
