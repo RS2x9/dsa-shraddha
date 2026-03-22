@@ -16,7 +16,7 @@ class teacher
     string name;
     string dept ;
     int salary;
-    teacher( string name , string dept , int salary)
+    teacher( string name , string dept , int salary)        // parameterised constructor
     {
         this-> name = name ;    // LHS name is object , RHS name is parameter
         this-> dept = dept ;
