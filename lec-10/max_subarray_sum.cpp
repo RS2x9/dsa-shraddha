@@ -8,41 +8,49 @@
 
 #include<iostream>
 #include<vector>
-#include<climits>   // to use INT_MIN
+#include<climits>
 using namespace std;
 int main()
 {
-    int arr[]={1,2,-3,4,5};
-    int n=sizeof(arr)/sizeof(arr[0]);
+    int n , value ;
+    vector<int> arr;
+    cout<<"\nEnter number of elements : \n";
+    cin>>n ;
 
-    // printing all the possible subarrays (funny thing )
-    cout <<"\n";
-    for (int st=0 ; st<n ; st++)    // st: starting index
+    // taking input
+    for ( int i=0; i<n ; i++)
     {
-        for (int en=st ; en<n ; en++)   // en : ending index
+        cout<<"Enter "<< i+1 <<"st value: ";
+        cin>> value;
+        arr.push_back(value);
+    }
+
+    // printing all the possible subarrays : brute force method 
+    cout<<"\nAll possible subarrays :";
+    for (int st =0 ; st<n ; st++)
+    {
+        for (int en = st ; en<n ; en++)
         {
-            for (int i=st ; i<=en ; i++)        // i traverse as st , en changes
+            for ( int trav= st ; trav<=en ; trav++)
             {
-                cout <<arr[i];
+                cout<<arr[trav] << ",";
             }
-            cout <<"\t";
+            cout<<"\t";
         }
-        cout <<"\n";
+        cout<<"\n";
     }
 
-    // finding the max sum 
-    // time complexity : O(n^2)
-    cout <<"\n";
-    
-    int msum=INT_MIN ; // INT_MIN represents the minimum value an int can hold in C++
-    for (int st=0 ; st<n ; st++)
+    int sum=0;
+    int msum = INT_MIN;
+    for ( auto iter : arr)
     {
-        int csum=0;   // stores the value of current sum
-        for (int en=st ; en<n ; en++)
+        sum =sum+iter;
+        msum = max( sum , msum);
+
+        if (sum<0)   // if the sum  is -ve then also max sum will be fetched correctly
         {
-            csum+=arr[en];
-            msum=max(csum,msum);  // this is put here so that it can check for all the possible subarrays 
+            sum =0;     // without this reset , we will get incorrect answers
         }
     }
-    cout <<msum;
+    cout<<"\nMax sum : "<< msum;
 }

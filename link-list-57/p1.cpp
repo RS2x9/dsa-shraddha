@@ -1,6 +1,6 @@
 // linked list(LL) : it is also a linear data structure 
 /* 
--->individual boxes are called as nodes and every node is connected to each other.
+--> individual boxes are called as nodes and every node is connected to each other.
 --> stores the variable in linear fasion .
 --> the memory address is not contigious , but we visulaize it as a linear structure 
 --> it's dynamic , so can add new nodes and can delete old ones 

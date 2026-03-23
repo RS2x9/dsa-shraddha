@@ -14,7 +14,7 @@
         Big O notation:
         ---> it's notation for both worst case time and space complexity .
         --> worst case is the upper boundary .
-        -- eg : if complexity is O(n) maximum of n number of opeartions can be perfromed .
+        -- eg : if complexity is O(n), maximum of n number of opeartions can be perfromed .
         --> if f(n)=4n^2 + 3n+5 . to calculate complexity , remove all the constants and consider the 
         highest degree , time complexity = O(n^2)
 */
@@ -32,7 +32,7 @@
         2)  Auxillary space : extra space taken by other variables . space complexity is considered in this case.
 
         --> eg: if an array is give as input of n number of elements  . we have to create another array squarearray[] which 
-        has to store the squares of the elements of the original aaray.
+        has to store the squares of the elements of the original array.
         This squarearray[] is taking extra space and this will be considered for space complexity ..
         since it has n number of elements so it's space complexity : O(n) i,e a straight line on a graph.
 

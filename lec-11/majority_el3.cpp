@@ -5,9 +5,11 @@
 --> no sorting required 
 --> start with the starting element and if the next elelemnt is same then increase the frquency else decrease it 
 --> we won't reset the element because that elelemnt can occur elsewhere in the array
---> it is assumed that the frequency of majority element > n/2
+--> it is assumed that the frequency of majority element > n/2 , not true in all the cases 
+--> note : in this process, we can't get the exact frequency 
 */
 
+// this is wrong code 
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -27,9 +29,14 @@ int main()
     int ans=0;
     for (int i=0 ; i<n ; i++)
     {
-        if(freq==0) ans=arr[i];
+        if(freq==0) 
+        {
+            ans=arr[i];
+            freq++;
+        }
         else if (ans==arr[i]) freq++;
         else freq--;
     }
-    cout <<"\n"<<ans;
+    cout <<"\n"<<ans<< endl;
+    cout<< freq;
 }

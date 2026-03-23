@@ -4,46 +4,44 @@
 // time complexity : O(n^2)
 // my logic
 // this code gives all the possible combinations 
-#include <iostream>
+#include<iostream>
 using namespace std;
+#include<vector>
 int main()
 {
-    int csum=0; // current sum
-    int count=0;
-    int n;
-    cout <<"Number of elements : ";
-    cin>>n;
-    int arr[n];
-    cout <<"Elements :";
-    for (int i=0 ; i<n ; i++)
+    int n ;
+    cout<<"Enter number of elements : ";
+    cin>> n;
+    vector<int> arr(n);
+    cout<<"Values: ";
+    for (int i=0 ; i<n ; i++ )
     {
+        cout<<"Enter "<<i+1<<" value: ";
         cin>>arr[i];
     }
-    int tsum; // target sum
-    cout <<"Target sum: ";
-    cin>>tsum;
-    for (int st=0 ; st<n ; st++)
+    cout<<"\n enter target sum: ";
+    int tar;
+    cin>>tar;
+    bool flag = false;      // to check target can be found or not 
+    for ( int st=0;st<n ; st++)
     {
-        if (arr[st] == tsum)  // checks for standalone element
+        int tsum = arr[st];
+        if ( tsum== tar)
         {
-            cout <<"\n" <<arr[st]<<" at index: "<<st <<endl;
-            break;
+            st++;       // single elemnts are not counted in pair sum problem
         }
-
-        for (int en=st+1 ; en<n-1 ; en++)  // checks for pair
+        for (int en =st+1 ; en<n-1 ; en++)
         {
-            csum=arr[st]+arr[en];
-            if (csum==tsum)   // the pairs are found
+            tsum += arr[en];
+            if ( tsum== tar)
             {
-                cout <<"\n " << arr[st]<<" "<<arr[en]<<" at index: "<<st<<","<<en<<endl;
-                break;
+                cout<< "\nPair at index: "<<st<<","<<en<<" and values are : "<<arr[st]<<","<<arr[en];
+                if (flag == false ) flag =true;     // means target found
             }
-
-            else 
-            {
-                csum=arr[st];  // starting refernce was this only 
-            }
-
+            else tsum= arr[st];     // removing the second added element
         }
     }
+    if ( flag == false) cout << "\nTarget not found"<< endl;
+    return 0; 
+   
 }

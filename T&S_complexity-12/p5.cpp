@@ -31,7 +31,7 @@ int main()
             .
             .
             .
-            f(1) 1+ f(0) 
+            f(1) = 1+ f(0) 
 
             f(0) is constant =k2 
         --> adding all the equations : f(n) = n*k1 + k2 ;

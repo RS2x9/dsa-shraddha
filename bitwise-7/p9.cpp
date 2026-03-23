@@ -28,7 +28,7 @@ int main()
     cout <<"size of long long "<<sizeof (long long int )<<endl;
 
     unsigned int x= -10;  // here compiler won't  give any errors 
-    cout<<x<<endl;  // it's giving very large value 
+    cout<<x<<endl;  // it's giving very large value  : pow(2,32)-10
     /*
     reason : to store  -10 in binary format , compiler has converted it to 2's complement , so MSB will be 1.
     since x is unsigned so compiler just returns the magnitude of that binary format because 

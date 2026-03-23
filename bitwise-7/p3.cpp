@@ -9,6 +9,6 @@
 using namespace std;
 int main()
 {
-    cout <<(4^6)<<endl;      // 0100 ^ 0010 --> 0010 --> 2 in decimal    
+    cout <<(4^6)<<endl;      // 0100 ^ 0110 --> 0010 --> 2 in decimal    
     cout <<(4^4)<<endl;
 }

@@ -1,5 +1,4 @@
 // Recursive fibonacci
-
 // this code returns the nth element
 
 #include <iostream>
@@ -34,7 +33,7 @@ int main()
 
 /*
     space complexity :
-    ---> there are  n levels 
+    --> there are  n levels 
     --> so SC=n*1
     --> SC= O(n)
 */

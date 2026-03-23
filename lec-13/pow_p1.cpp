@@ -1,5 +1,4 @@
-/*
-        Compute pow(x,n)  using Binary Exponentiation
+/*        Compute pow(x,n)  using Binary Exponentiation
         
         --> without using this method , TC = O(n)
         --> x : base , n : power
@@ -8,7 +7,7 @@
         form is : ( logn with base 2)+1 .
         --> we will run our loop this number of times to calculate pow(x,n)
         --> TC is : O(logn with base 2)
-        --> now we assign powers to x, starting from left of binary form ,
+        --> now we assign powers to base, starting from left of binary form ,
             start giving powers from to the total number 0, 1 we have got  to x 
         --> now muliply only those numbers when we have got 1 , ignore 0 wala 3 ka powers .
         --> and we won't calculate even power using normal method , we will square that 
@@ -23,7 +22,7 @@ int main()
    // x is base , n is power 
     int n;   
     double x;
-    cout << "Enter base power: ";
+    cout << "Enter base , power: ";
     cin>> x >> n;
 
     long bform =n;

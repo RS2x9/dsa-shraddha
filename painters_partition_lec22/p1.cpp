@@ -29,7 +29,7 @@
              the minimum time = minimum of all max = 60 units 
 
              --> now going out of bounds :
-                --> min. time to complete the painting = 40 units i,e max(all the board lengths) , till this time other painters will complete the paintings `,
+                --> min. time to complete the painting = 40 units i,e max(all the board lengths) , till this time all the painters will complete the paintings `,
                  some times there are limit to number of painters 
                 --> max. time to complete the painting = 100 units i,e sum of all the board lengths , when only one painter has to do the work 
                 -->our final "ans" lies in this range .
@@ -52,17 +52,18 @@ bool isvalid( vector<int> arr , int n , int m , int mid )  // mid is maximum all
 {
     int painters =1 ; // initially 1st  painter  will paint 
     int time =0;  // he hasn't started painting 
+
     for (int i=0 ; i<n ; i++)
     {
         if ( time + arr[i] <= mid) 
         {
-            time=time+arr[i];  // time taken to paint for individual painter
+            time=time+arr[i];  // time taken to paint for that same  painter
         }
 
-        else 
+        else        // there is requirement of more painters 
         {
-            painters++;  // we need more painters 
-            time =arr[i] ; // time required by painter to paint the board 
+            painters++; 
+            time =arr[i] ; // time required by new painter to paint his 1st board 
         }
     }
 
@@ -82,7 +83,7 @@ int mintime( vector<int> arr , int &st , int &end , int n , int m)   // st: star
     {
         int mid = st + (end -st )/2;
         int a =isvalid( arr , n ,m , mid );
-        if ( a==0)      // when invalid , move to right , ans lies there 
+        if ( a==0)      // when invalid , move to right beacuse number os painters are more required
         {
             st =mid+1;
         }

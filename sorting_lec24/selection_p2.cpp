@@ -1,6 +1,6 @@
 /*
     Selection Sort :
-    --> opposite  of selection sort 
+    --> opposite  of bubble sort 
     --> one part is sorted , the other is unsorted
     --> take the element from the unsorted part to sorted part in n-1 iterations.
     -->  initially assumption is : the entire array is unsorted 

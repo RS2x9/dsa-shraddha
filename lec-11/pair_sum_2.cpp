@@ -1,45 +1,52 @@
-// pair sum : method -2 
-#include <iostream>
-#include <vector>
-#include<algorithm>   // to use algorithms like sort()
+// pair sum : method -2
+#include<iostream>
 using namespace std;
+#include<vector>
+#include<algorithm>
 int main()
 {
-    int n;
-    cout <<"Number of elements :";
-    cin>>n;
+    int n ;
+    cout<<"Enter number of elements: ";
+    cin>> n;
     vector<int> arr(n);
-    cout <<"Elements: ";
-    for (int i=0 ; i<n ; i++)
+    cout<<"Values: \n";
+    for ( int i=0; i<n ; i++)
     {
-        cin>>arr[i];
+        cout << "Enter "<< i+1 <<" st value: ";
+        cin>> arr[i];
     }
+    int tar;
+    cout<<"Enter target: ";
+    cin>>tar;
 
-    int st=0;
-    int en=n-1;
-    sort(arr.begin() , arr.end());  // sorts the vector element in ascending ordder
-    int tsum;
-    cout <<"Target sum: ";
-    cin>>tsum;
-
-    // printing the sorted vector 
-    for (int num : arr)
+    // sorting 
+    sort(arr.begin() , arr.end());
+    int st=0;       // starting index
+    int en =n-1;        // ending index 
+    int tsum=0;     // store sum of pais
+    bool flag = false;      // to check target is found or not
+    while (st<en)           // conditiona to avoid glitches and over output
     {
-        cout <<num <<" ";
-    }
-    while (st<en)
-    {
-        
-        int csum= arr[st]+ arr[en] ;
-        if ( csum == tsum ) 
+        int tsum = arr[st]+ arr[en] ;
+        if ( tsum == tar) 
         {
-            cout <<"\n" << "index: " << st << "," << en << endl;
-            break;
+            cout<< "Index: "<<st<<"," << en << " and values : " << arr[st]<<", "<<arr[en] <<endl;
+            flag = true;
+
+            // Increment/Decrement: to traverse in the array
+            st++;
+            en--;
         }
-        else if (csum<tsum) st=st+1;
-        else if (csum>tsum) en=en-1;
+        else if ( tsum > tar) 
+        {
+            en--;
+        }
+        else if ( tsum<tar) 
+        {
+            st++;
+        }
+        
+        
     }
-
-    if (st>=en) cout <<"\n" <<"not found";
-
+    if ( flag == false ) cout<<"\nTarget not found";
 }
