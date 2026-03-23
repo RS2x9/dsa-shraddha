@@ -17,20 +17,20 @@ class student
 {
     public:
     string name ;
-    double *cgpaptr;
+    double *cgpaptr;        //this is a pointer ,  not a actual memory
 
-    student ( string name , double cgpa)
+    student ( string n , double cg)
     {
-        this -> name = name ;
-        cgpaptr = new double ;
-        *cgpaptr = cgpa;
+        name = n ;
+        cgpaptr = new double ;      // value will be stored safely , will not point to garbage
+        *cgpaptr = cg;
     }
 
-    student ( student &obj)
+    student ( student &other)
     {
-        this -> name = obj.name ;
+        name = other.name ;
         cgpaptr = new double ;      // new memory space is allocated 
-        *cgpaptr = *obj.cgpaptr;    
+        *cgpaptr = *other.cgpaptr;      // value is copied
 
         // for name : deep copy is done by default because : string is a class with its own copy constructor
     }
