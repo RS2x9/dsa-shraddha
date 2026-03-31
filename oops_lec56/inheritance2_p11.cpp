@@ -1,12 +1,11 @@
 /*
-    when contructor is parametrised 
-    --> called before the default constructor 
+    Base class constructor → Child class constructor
 */
 
 #include<iostream>
 #include<string>
 using namespace std;
-class person 
+class person        // parent class 
 {
     public: 
     string name ;
@@ -17,9 +16,16 @@ class person
         this -> name = name ;
         this -> age = age ;
     }
+
+    void get_info()
+    {
+        cout<< "I am the father:-"<< endl;
+        cout <<"name: " << name << endl;
+        cout <<"age: "<< age << endl;
+    }
 };
 
-class student : public person
+class student : public person               // child class
 {
     public:
     int roll;
@@ -31,7 +37,7 @@ class student : public person
         this-> roll = roll;
     }
 
-    void getinfo()
+    void get()
     {
         cout << "name : " << name <<endl;
         cout << "age : " << age << endl;
@@ -42,5 +48,25 @@ class student : public person
 int main()
 {
     student s1 ("rishi", 20 , 91);
-    s1.getinfo();
+    s1.get();
+    s1.get_info();
 }
+
+
+
+/*
+    --> Base Class Constructor Runs FIRST
+        This line forces:  person(name, age)
+        then Child Constructor Runs
+        Now s1 is fully initialized.
+*/
+
+/*
+    --> s1.get_info();
+    --> here person class is not called and still   it's not giving error 
+    --> stu inherits everything public from person
+        So inside stu, you already have:
+        name
+        age
+        get_info()
+*/

@@ -1,39 +1,38 @@
-#include <iostream>
+// heirarchial inheritance 
+#include<iostream>
 #include<string>
-using namespace std;
+using namespace std ;
 
 class person
 {
     public:
-    string name;
+        string name ;
 };
 
-class student 
+class depart : public person
 {
     public:
-    int roll;
+        string dept;
 };
 
-class teacher : public person , public student 
+class more : public person
 {
-    public :
-    string subject;
-
-    void getinfo()
-    {
-        cout << "hierrachhial inheritance" <<endl;
-    }
+    public:
+        int age ;
 };
-
 int main()
 {
-    teacher t1;
-    t1.name = "rishi";
-    t1.roll = 91;
-    t1.subject = "maths ";
-
-    cout << " name : " << t1.name << endl;
-    cout << " roll : " << t1.roll << endl;
-    cout << " subjeect : " << t1.subject << endl;
-
+    more rishi;
+    rishi.name = "rishi";
+    rishi.age = 21;
+    
+    depart rishu;
+    rishu.name = "rishu";
+    rishu.dept = "robotics";
+    
+    cout << "Name: "<< rishi.name <<endl;
+    cout <<"Age: " << rishi.age <<endl;
+    cout <<"Name: " <<rishu.name <<endl;
+    cout << "Dept: " << rishu.dept ;
+    return 0;
 }

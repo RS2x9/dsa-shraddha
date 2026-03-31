@@ -19,7 +19,7 @@ class student
         cout << "\nnon - parametrized constructor " << endl;
     }
 
-    student (string name )    // non - parametrized constructor
+    student (string name )    // parametrized constructor
     {
         cout << "\nparametrized constructor " << endl;
         this -> name = name ;

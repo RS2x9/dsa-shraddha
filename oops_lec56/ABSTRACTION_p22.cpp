@@ -18,24 +18,35 @@
 */
 
 #include<iostream>
-using namespace std;
+using namespace std ;
 
-class shape     // absttract class
+class parent
 {
-    virtual void draw() =0 ;    // pure virtual function
+    protected :     // accessible to derieved classes , but not outside 
+        int secret ;
+    public:
+        parent(int x)
+        {
+            secret = x;
+            cout << "Parent me value: " << secret << endl;
+        }
 };
 
-class circle 
+class child : public parent
 {
-    public:
-    void draw()
-    {
-        cout << " drawing circle " << endl;
-    }
+    public :
+        child(int val) : parent(val) {}
+        void call()
+        {
+            cout << "child secret: " << secret <<endl;
+            // child can access the protected member 
+        }
 };
 
 int main()
 {
-    circle c1;
-    c1.draw();
+    parent p(100);
+    
+    child c(200);
+    c.call();
 }

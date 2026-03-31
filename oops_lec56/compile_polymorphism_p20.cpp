@@ -9,30 +9,37 @@
     --> always called during runtime.
 */
 
+// compile time polymorphism
 #include<iostream>
+#include<string>
 using  namespace std;
-
 class parent 
 {
-    public: 
-    virtual void hello()
-    {
-        cout <<" parent here" << endl;
-    }
+    public:
+        void hello()
+        {
+            cout << "I am umunger sour" << endl;
+        }
 };
 
-class ch : public parent 
+class child : public parent
 {
-    public :
-    void hello()
-    {
-        cout << " child here " << endl;
-    }
-
+    public:
+        void hello()
+        {
+            cout <<"chotu ben ten" << endl;
+        }
 };
 
 int main()
 {
-    ch c1;
-    c1.hello();
+    parent* p;
+    child c;
+    p= &c;
+    p->hello();
 }
+
+/*
+    --> Lesson: Without virtual, the compiler is dumb — it only looks at the pointer type, 
+        not the actual object. This is compile‑time polymorphism (really just function hiding).
+*/
