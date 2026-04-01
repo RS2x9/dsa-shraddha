@@ -60,3 +60,20 @@ int main()
 {
     List ll;
 }
+
+/*
+    Node* newNode = new Node(val);
+        --> new Node(val)
+            --> Calls the Node constructor with val.
+            --> Allocates memory on the heap (dynamic memory).
+            --> Inside that memory block:
+                --> data is set to val.
+                --> next is set to NULL.
+
+        --> Node* newNode
+            --> Declares a pointer variable named newNode.
+            -> This pointer lives on the stack (inside the function).
+
+        --> Assignment
+            --> The pointer newNode now stores the address of the newly allocated Node object on the heap.
+*/

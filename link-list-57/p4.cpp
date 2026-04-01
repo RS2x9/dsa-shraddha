@@ -24,6 +24,7 @@ class List
 {
    Node* head;      // private 
    Node* tail;      // private
+   // head and tail are variables, not keywords
    public:
    List()
    {
@@ -87,3 +88,20 @@ int main()
     ll.printll();
 
 }
+
+/*
+    --> Here you see Node twice:
+        --> class Node → defines a new type called Node.
+        --> Node* next → declares a pointer variable named next that can store the address of a Node object.
+
+        --> Relationship
+            --> The class name is the type (like int, float, etc.).
+            --> When you write Node*, you’re saying: “this is a pointer to a Node type.”
+            --> They must match because the compiler needs to know what kind of object the pointer will point to.
+*/
+
+/*
+    --> Node* → pointer to a class named Node.
+        node* → pointer to a class named node. Different type because of case sensitivity.
+        int* → pointer to a primitive integer.
+*/
