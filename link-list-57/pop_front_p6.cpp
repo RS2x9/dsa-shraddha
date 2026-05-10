@@ -61,7 +61,7 @@ class List
         Node*  temp ;       // this is going to hold the address of node to be  deleted 
         temp = head;
         head = head-> next;     // the 2nd node is the new head pointer as 1st is going to be deleted
-        temp =NULL;
+        temp =NULL;     // the code is running without this line also 
         delete temp;
     }
 
