@@ -1,4 +1,4 @@
-/*
+ /*
     Constructor:
     --> special method which automatically gets called during object creation
     --> during initialisation of variables in class , constructor is used 
@@ -15,7 +15,7 @@
         --> copy 
     
     -->A class can have multiple constructors with different parameter lists.
-        This is called constructor overloading and is an example of compile-time polymorphism (also called Static Polymorphism)
+        This is called "constructor overloading" and is an example of compile-time polymorphism (also called Static Polymorphism)
     --> Valid overloading:
             A(int x);
             A(double x);

@@ -2,9 +2,9 @@
     Run time Polymorphism 
     --> executed at run time 
     --> dynamic
-    --> example : function overriding 
+    --> type 1  : function overriding 
         --> both parent and child contain the same function .
-        --> parameters can be same .
+        --> parameters may be same .
         --> implementation should be different .
         --> parent class function is overridden by child class function.
 */

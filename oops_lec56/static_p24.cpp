@@ -1,3 +1,9 @@
+/*
+    static keyword :-
+    --> static variables :
+        --> static variales in a class are created and initialised once.
+        --> they are shared by all the objects of the class
+*/
 #include<iostream>
 using namespace std;
 
@@ -27,5 +33,3 @@ int main()
     // of the program . it will persists inside memory untill main() gets over.
 
 }
-
-// see p24

@@ -1,5 +1,5 @@
 // compile time polymorphism 
-// example : function overloading 
+// type 2    : function overloading 
 
 #include<iostream>
 #include<string> 
@@ -7,7 +7,7 @@ using namespace std;
 
 class print
 {
-    public:
+    public: 
 
     void show (int x)
     {

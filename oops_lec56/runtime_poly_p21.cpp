@@ -1,32 +1,37 @@
 // run time polymorphism 
-#include<iostream>
-#include<string>
-using namespace std ;
+#include <iostream>
+using namespace std;
 
-class parent
-{
-    public:
-        virtual void hello()
-        {
-            cout << "I am Monster" << endl;
-        }
+class Parent {
+public:
+    // 'virtual' tells the compiler: 
+    // "Decide at runtime which version of hello() to call"
+    virtual void hello() {
+        cout << "Parent class\n";
+    }
 };
 
-class child : public parent 
-{
-    public:
-        void hello() override
-        {
-            cout << "I am ben 10" << endl;
-        }
+class Child : public Parent {
+public:
+    // Overrides Parent::hello()
+    void hello() override {   // 'override' is optional, but good practice
+        cout << "Child class\n";
+    }
 };
 
-int main()
-{
-    parent* p;
-    child c;
-    p = &c;
-    p-> hello();
+int main() {
+    Parent* ptr;   // Base class pointer
+
+    Parent p;
+    Child c;
+
+    ptr = &p;      // Pointer points to Parent object
+    ptr->hello();  // Output: Parent class (base version)
+
+    ptr = &c;      // Pointer points to Child object
+    ptr->hello();  // Output: Child class (derived version, due to virtual)
+
+    return 0;
 }
 
 /*
