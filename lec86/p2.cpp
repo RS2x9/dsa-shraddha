@@ -41,7 +41,8 @@ int height_cal(node* root)
     if ( root == NULL) return 0;
     int lefth = height_cal( root -> left);
     int righth = height_cal( root -> right);
-    return max( lefth , righth) +1 ;
+    return max( lefth , righth) +1 ;        // if max is not taken then unnecessarily th smaller height will get added 
+                                            // which is not required 
 }
 int main()
 {
