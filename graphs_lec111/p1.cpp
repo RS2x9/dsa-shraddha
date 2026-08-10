@@ -1,8 +1,8 @@
 /*
     GRAPHS:
-    --> It is called as "NETWORK OF NOTES" because nodes are connected to each other, there is no hierarchy followed
+    --> It is called as "NETWORK OF NODES" because nodes are connected to each other, there is no hierarchy followed
     --> Nodes are connected to each other by edges as trees were connected by branches
-    --> a single node in trees are known as vertex, multiple are known as vertices
+    --> a single node in GRAPHS are known as vertex, multiple are known as vertices
     --> example: 
         --> the "map", or ola , uber shows graphs of roads or any area, they are formed using graph data structure
         --> social media uses graphs to connect multiple people together
